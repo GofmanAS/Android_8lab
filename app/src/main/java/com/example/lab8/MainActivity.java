@@ -12,13 +12,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
+{
     Button buttonAdd, buttonDelete, buttonClear, buttonRead, buttonUpdate;
     EditText etName, etEmail, etID;
     DBHelper dbHelper;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         dbHelper = new DBHelper(this);
     }
+
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v)
@@ -107,5 +110,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         dbHelper.close(); // закрываем соединение с БД
     }
-
 }
